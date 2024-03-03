@@ -11,12 +11,12 @@ const VideoComponent: React.FC = () => {
         avatarSrc = "profilePic.png"
         likes = {0}
         comments = {0}
-        videoSrc='videos\cat1.mp4'/>
+        videoSrc='videos\cat2.mp4'/>
         <VideoCard 
         avatarSrc = "profilePic.png"
         likes = {0}
         comments = {0}
-        videoSrc='videos\cat2.mp4'/>
+        videoSrc='videos\introVideo.mp4'/>
         <VideoCard 
         avatarSrc = "profilePic.png"
         likes = {0}
