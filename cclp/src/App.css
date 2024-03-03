@@ -97,6 +97,13 @@ html, body {
   display: flex;
   flex-direction: column;
   background-color: antiquewhite;
+  width: 300px;
+  height: 600px;
+}
+.videoComments > div{
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
 .sidebarIcon{
@@ -108,5 +115,8 @@ html, body {
   display:flex;
   flex-direction: column;
   width: 100px;
-  
+}
+.commentPic{
+  height:20px;
+  width:20px;
 }

@@ -19,31 +19,26 @@ function LikeButton(){
 function CommentSection(){
     let comments = <div className="videoComments">
         <div>
-            <img alt="profile pic" resource="profilePic.png"/><p>Some text</p>
+            <img className="commentPic" alt="profile pic" src="profilePic.png"/><p>Some text</p>
         </div>
         <div>
-            <img alt="profile pic" resource="profilePic.png"/><p>Some more text</p>
+            <img className="commentPic" alt="profile pic" src="profilePic.png"/><p>Some more text</p>
         </div>
         <div>
-            <img alt="profile pic" resource="profilePic.png"/><p>Some extra more text</p>
+            <img className="commentPic" alt="profile pic" src="profilePic.png"/><p>Some extra more text</p>
         </div>
         <div>
-            <img alt="profile pic" resource="profilePic.png"/><p>TEXT</p>
+            <img className="commentPic" alt="profile pic" src="profilePic.png"/><p>TEXT</p>
         </div>
 
     </div>
     return comments
 }
 
-function CommentButton(){
+function CommentButton({commentsActive, setComments}: {commentsActive:any, setComments:any}){
     let [clicked, setClicked] = useState(false)
-    let icon = <img className="sidebarIcon" alt="profile pic" src="./logo512.png"/>
-    if (clicked === true){
-        icon = <div>
-            icon
-            <CommentSection />
-        </div>
-    }
+    let icon = <img className="sidebarIcon" onClick={() => setComments(!commentsActive)} alt="profile pic" src="./logo512.png"/>
+    
     return icon
 }
 
@@ -52,7 +47,7 @@ function FollowButton(){
     return icon
 }
 
-function PlaylistButton(){
+function PlaylistButton({playlistActive, setPlaylist}: {playlistActive:any, setPlaylist:any}){
     let icon = <img className="sidebarIcon" alt="profile pic" src="./logo512.png"/>
     return icon
 }
@@ -60,12 +55,12 @@ function PlaylistButton(){
 // interface SidebarProps{
 //     button_liked: boolean;
 // }
-function VideoSidebar(){
+function VideoSidebar({commentsActive, playlistActive, setComments, setPlaylist}: {commentsActive:any, setComments:any, playlistActive:any, setPlaylist:any}){
     let res = <div className="videoSidebar">
         <FollowButton />
         <LikeButton />
-        <CommentButton />
-        <PlaylistButton />
+        <CommentButton commentsActive={commentsActive} setComments= {setComments}/>
+        <PlaylistButton playlistActive={playlistActive} setPlaylist={setPlaylist}/>
     </div>
     return res
 }
@@ -81,10 +76,20 @@ function VideoSpace(){
         </div>
     return (space)
 }
+interface videoProps{
+
+}
 export default function VideoPlayer(){
+    let [commentsActive, setComments] = useState(false);
+    let [playlistActive, setPlaylist] = useState(false);
+    let commentSection = commentsActive === true ? <CommentSection/> : <div></div>
+    // let playlistSection = playlistActive === true ? <PlaylistSection/> : <div></div>
     let res = <div id="video-wrapper">
         <VideoSpace />
-        <VideoSidebar />
+        <VideoSidebar commentsActive= {commentsActive} playlistActive = {playlistActive} setComments={setComments} setPlaylist= {setPlaylist}/>
+        {commentSection}
+        {/* {playlistSection} */}
     </div>
+
     return res
 }
