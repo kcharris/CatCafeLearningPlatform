@@ -16,6 +16,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import '../App.css'
+
 
 // Augment the palette to include a salmon color
 declare module '@mui/material/styles' {
@@ -43,7 +45,7 @@ theme = createTheme(theme, {
   palette: { 
     minty: theme.palette.augmentColor({
       color: {
-        main: '#14f593',
+        main: '#9898FB',
       },
       name: 'minty',
     }),
@@ -195,7 +197,7 @@ export default function PrimarySearchAppBar() {
         <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" color="minty">
             <Toolbar>
-            <IconButton
+            {/* <IconButton
                 size="large"
                 edge="start"
                 color="inherit"
@@ -203,7 +205,7 @@ export default function PrimarySearchAppBar() {
                 sx={{ mr: 2 }}
             >
                 <MenuIcon />
-            </IconButton>
+            </IconButton> */}
 
             <img className="mainLogo" alt="cat cafe learning platform logo" src="logo.png"/>
 
@@ -218,7 +220,7 @@ export default function PrimarySearchAppBar() {
             </Search>
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                 <Badge badgeContent={4} color="error">
                     <MailIcon />
                 </Badge>
@@ -231,18 +233,9 @@ export default function PrimarySearchAppBar() {
                 <Badge badgeContent={17} color="error">
                     <NotificationsIcon />
                 </Badge>
-                </IconButton>
-                <IconButton
-                size="large"
-                edge="end"
-                aria-label="account of current user"
-                aria-controls={menuId}
-                aria-haspopup="true"
-                onClick={handleProfileMenuOpen}
-                color="inherit"
-                >
-                <AccountCircle />
-                </IconButton>
+                </IconButton> */}
+
+            <img className="profile" alt="profile" src="profilePic.png"/> 
             </Box>
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                 <IconButton
