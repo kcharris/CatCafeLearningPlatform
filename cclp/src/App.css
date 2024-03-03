@@ -137,8 +137,8 @@ height: 100%
   display:flex;
   flex-direction: column;
   background-color: rgb(204, 255, 223);
-  height:800px;
-  width: 500px;
+  height: 70dvh;
+  width: 50dvw;
 }
 
 .MuiListItemText-primary {
