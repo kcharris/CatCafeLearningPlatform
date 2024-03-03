@@ -4,7 +4,10 @@ function SaveToPlaylistButton(){
     return <b/>
 }
 
-function LikeButton(button_liked: boolean){
+interface LikeButtonProps{
+    button_liked: boolean;
+}
+function LikeButton({button_liked}: LikeButtonProps){
     let icon = null
     let no_like = <span role="img" aria-label="sheep">🐱</span>
     let like = <span role="img" aria-label="sheep">😸</span>
@@ -23,8 +26,17 @@ function FollowButton(){
     return <b/>
 }
 
-function Overlay(){
+// interface SidebarProps{
+//     button_liked: boolean;
+// }
+function Sidebar({button_liked}: LikeButtonProps){
     // this "overlay" contains the 4 buttons. Right now they are planned for the side of the videoSpace box.
+    let res = <div>
+        <SaveToPlaylistButton />
+        <LikeButton button_liked= {button_liked}/>
+        <CommentButton />
+        <FollowButton />
+    </div>
     return <b/>
 }
 
@@ -41,6 +53,11 @@ function VideoSpace(){
     return (space)
 }
 export default function VideoPlayer(){
-    
-    return (<VideoSpace />)
+    // need make a bigger box, wrap in div
+    let button_liked = false;
+    let res = <div id="video-wrapper">
+        <VideoSpace />
+        <Sidebar button_liked= {button_liked} />
+    </div>
+    return res
 }

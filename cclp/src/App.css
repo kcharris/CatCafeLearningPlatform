@@ -52,3 +52,7 @@
 .react-player > div{
   position:relative;
 }
+
+#video-wrapper{
+  display: flex;
+}
