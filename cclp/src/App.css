@@ -96,9 +96,9 @@ html, body {
 .videoComments{
   display: flex;
   flex-direction: column;
-  background-color: antiquewhite;
-  width: 300px;
+  background-color: rgb(204, 255, 223);
   height: 600px;
+  width:300px;
 }
 .videoComments > div{
   display: flex;
@@ -108,7 +108,7 @@ html, body {
 .videoPlaylist {
   display: flex;
   flex-direction: column;
-  background-color: wheat;
+  background-color: rgb(204, 255, 223);
   width: 300px;
   height: 600px;
 }
@@ -130,4 +130,20 @@ html, body {
 .commentPic{
   height:20px;
   width:20px;
+}
+.searchSectionWrapper{
+  display:flex;
+  align-items: center;
+  margin:auto;
+}
+.searchMainList{
+  display:flex;
+  flex-direction: column;
+  background-color: rgb(204, 255, 223);
+  height:800px;
+  width: 500px;
+}
+
+.MuiListItemText-primary {
+  text-align: center;
 }
