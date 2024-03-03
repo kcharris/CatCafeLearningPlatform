@@ -11,17 +11,17 @@ const Atest: React.FC = () => {
         avatarSrc = "profilePic.png"
         likes = {0}
         comments = {0}
-        videoSrc='videos\pexels_videos_Street_at_night.mp4'/>
+        videoSrc='videos\cat1.mp4'/>
         <VideoCard 
         avatarSrc = "profilePic.png"
         likes = {0}
         comments = {0}
-        videoSrc='videos\pexels_videos_Street_at_night.mp4'/>
+        videoSrc='videos\cat2.mp4'/>
         <VideoCard 
         avatarSrc = "profilePic.png"
         likes = {0}
         comments = {0}
-        videoSrc='videos\pexels_videos_Street_at_night.mp4'/>
+        videoSrc='videos\cat3.mp4'/>
       </div>
     </div>
   );
