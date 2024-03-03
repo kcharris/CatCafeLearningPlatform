@@ -1,5 +1,8 @@
 import ReactPlayer from 'react-player'
 import { useState } from 'react';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormGroup from '@mui/material/FormGroup'
 
 // interface LikeButtonProps{
 //     button_liked: boolean;
@@ -35,10 +38,9 @@ function CommentSection(){
     return comments
 }
 
-function CommentButton({commentsActive, setComments}: {commentsActive:any, setComments:any}){
-    let [clicked, setClicked] = useState(false)
-    let icon = <img className="sidebarIcon" onClick={() => setComments(!commentsActive)} alt="profile pic" src="./logo512.png"/>
-    
+function CommentButton({currState, setCurrState}:{currState:any, setCurrState:any}){
+    let icon = <img className="sidebarIcon" onClick={() => setCurrState(currState !== 1 ? 1 : 0)} alt="profile pic" src="./logo512.png"/>
+
     return icon
 }
 
@@ -47,20 +49,33 @@ function FollowButton(){
     return icon
 }
 
-function PlaylistButton({playlistActive, setPlaylist}: {playlistActive:any, setPlaylist:any}){
-    let icon = <img className="sidebarIcon" alt="profile pic" src="./logo512.png"/>
+function PlaylistButton({currState, setCurrState}:{currState:any, setCurrState:any}){
+    let icon = <img className="sidebarIcon" onClick={() => setCurrState(currState !== 2 ? 2 : 0)} alt="profile pic" src="./logo512.png"/>
     return icon
+}
+function PlaylistSection(){
+    let playlist = <div className="videoPlaylist">
+        <p>Add to playlist</p>
+        <FormGroup>
+            <FormControlLabel control= {<Checkbox/>} label="Math"/>
+            <FormControlLabel control= {<Checkbox/>} label="Science"/>
+            <FormControlLabel control= {<Checkbox/>} label="Biology"/>
+            <FormControlLabel control= {<Checkbox/>} label="History"/>
+        </FormGroup>
+
+    </div>
+    return playlist
 }
 
 // interface SidebarProps{
 //     button_liked: boolean;
 // }
-function VideoSidebar({commentsActive, playlistActive, setComments, setPlaylist}: {commentsActive:any, setComments:any, playlistActive:any, setPlaylist:any}){
+function VideoSidebar({currState, setCurrState}:{currState:any, setCurrState:any}){
     let res = <div className="videoSidebar">
         <FollowButton />
         <LikeButton />
-        <CommentButton commentsActive={commentsActive} setComments= {setComments}/>
-        <PlaylistButton playlistActive={playlistActive} setPlaylist={setPlaylist}/>
+        <CommentButton currState={currState} setCurrState={setCurrState}/>
+        <PlaylistButton currState={currState} setCurrState={setCurrState}/>
     </div>
     return res
 }
@@ -80,15 +95,13 @@ interface videoProps{
 
 }
 export default function VideoPlayer(){
-    let [commentsActive, setComments] = useState(false);
-    let [playlistActive, setPlaylist] = useState(false);
-    let commentSection = commentsActive === true ? <CommentSection/> : <div></div>
-    // let playlistSection = playlistActive === true ? <PlaylistSection/> : <div></div>
+    let states = [<div></div>, <CommentSection/>, <PlaylistSection/>]
+    let [currState, setCurrState] = useState(0);
+    // There is a bug here where commentSection and PlaylistSection may be active at the some time, but I only want the most recent one pressed to be active.
     let res = <div id="video-wrapper">
         <VideoSpace />
-        <VideoSidebar commentsActive= {commentsActive} playlistActive = {playlistActive} setComments={setComments} setPlaylist= {setPlaylist}/>
-        {commentSection}
-        {/* {playlistSection} */}
+        <VideoSidebar currState={currState} setCurrState={setCurrState}/>
+        {states[currState]}
     </div>
 
     return res

@@ -105,6 +105,17 @@ html, body {
   align-items: center;
   justify-content: left;
 }
+.videoPlaylist {
+  display: flex;
+  flex-direction: column;
+  background-color: wheat;
+  width: 300px;
+  height: 600px;
+}
+.videoPlaylist > FormGroup > FormControlLabel{
+  align-items:center;
+  justify-content: center;
+}
 
 .sidebarIcon{
   height:80px;
