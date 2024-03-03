@@ -46,7 +46,7 @@ function App() {
               <MenuItem> 
                 <div>Playlist</div>
               </MenuItem>
-              <MenuItem onClick={()=> handleButtonClick(videoPlayer)}> 
+              <MenuItem onClick={()=> handleButtonClick(searchSection)}> 
                 <div>Explore</div>
               </MenuItem>
               <MenuItem> 
