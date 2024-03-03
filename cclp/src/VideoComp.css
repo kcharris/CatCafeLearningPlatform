@@ -8,6 +8,7 @@
     border-radius: 20px;
     overflow: scroll;
     scroll-snap-type: y mandatory;
+    box-shadow: 2px 1px 1px 1px #ccc;
 }
 
 .appVideo::-webkit-scrollbar {
@@ -30,6 +31,28 @@
     width: 100%;
 
 }
+
 .video-card-wrapper{
     margin:auto;
+}
+
+
+/* For the Video player sidebar. Like, Comment, Add to the playlist */
+.videoCardSidebar {
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    height: 100%;
+    color: white;
+    padding-bottom: 50px;
+    
+}
+
+.videoCardSidebar > * {
+    padding-right: 5px;
+}
+.addBtnVPNF {
+    color: white;
 }

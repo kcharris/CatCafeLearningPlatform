@@ -197,6 +197,7 @@ height: 100%
   width: 20vw;
   background-color: #9898FB;
   border-radius: 20px;
+  box-shadow: 2px 1px 1px 1px #ccc;
 }
 
 .SidebarList {
