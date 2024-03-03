@@ -6,27 +6,56 @@ import { useState } from 'react';
 // }
 function LikeButton(){
     let icon = null
-    let no_like = <span role="img" aria-label="sheep">🐱</span>
-    let like = <span role="img" aria-label="sheep">😸</span>
+    let no_like = <img className="sidebarIcon" alt="profile pic" src="./searchImage.png"/>
+    let like = <img className="sidebarIcon" alt="profile pic" src="./plusIcon.png"/>
     let [button_liked, setButtonLiked] = useState(false)
     function handleClick(){
         setButtonLiked(!button_liked)
     }
-    icon = <div className = "LikeButton" onClick= {handleClick}>{button_liked === true ? like :no_like }</div>
+    icon = <div className = "LikeButton sidebarIcon" onClick= {handleClick}>{button_liked === true ? like :no_like }</div>
     // icon should only be part of what is returned. Size of icon needs to be changed or modified in overlay.
     return icon
 }
 
+function CommentSection(){
+    let comments = <div className="videoComments">
+        <div>
+            <img alt="profile pic" resource="profilePic.png"/><p>Some text</p>
+        </div>
+        <div>
+            <img alt="profile pic" resource="profilePic.png"/><p>Some more text</p>
+        </div>
+        <div>
+            <img alt="profile pic" resource="profilePic.png"/><p>Some extra more text</p>
+        </div>
+        <div>
+            <img alt="profile pic" resource="profilePic.png"/><p>TEXT</p>
+        </div>
+
+    </div>
+    return comments
+}
+
 function CommentButton(){
-    return <div>comment</div>
+    let [clicked, setClicked] = useState(false)
+    let icon = <img className="sidebarIcon" alt="profile pic" src="./logo512.png"/>
+    if (clicked === true){
+        icon = <div>
+            icon
+            <CommentSection />
+        </div>
+    }
+    return icon
 }
 
 function FollowButton(){
-    return <div>follow</div>
+    let icon = <img className="sidebarIcon" alt="profile pic" src="./profilePic.png"/>
+    return icon
 }
 
 function PlaylistButton(){
-    return <div>playlist</div>
+    let icon = <img className="sidebarIcon" alt="profile pic" src="./logo512.png"/>
+    return icon
 }
 
 // interface SidebarProps{
@@ -34,11 +63,11 @@ function PlaylistButton(){
 // }
 function VideoSidebar(){
     // this "overlay" contains the 4 buttons. Right now they are planned for the side of the videoSpace box.
-    let res = <div>
-        <PlaylistButton />
+    let res = <div className="videoSidebar">
+        <FollowButton />
         <LikeButton />
         <CommentButton />
-        <FollowButton />
+        <PlaylistButton />
     </div>
     return res
 }

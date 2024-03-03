@@ -93,3 +93,20 @@ html, body {
   display: flex;
   height: 100dvh;
 }
+.videoComments{
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+}
+
+.sidebarIcon{
+  height:80px;
+  width:80px;
+  align-self: center;
+}
+.videoSidebar{
+  display:flex;
+  flex-direction: column;
+  width: 100px;
+  
+}
