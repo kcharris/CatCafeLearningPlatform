@@ -1,3 +1,9 @@
+html, body {
+  background-image: url('./../public/background.png');
+  background-size: cover;
+  background-position: center;
+}
+
 .App {
   text-align: center;
 }
@@ -59,4 +65,27 @@
 
 .LikeButton{
   cursor: pointer;
+}
+
+.searchContainer { 
+  position:relative;
+  padding:0;
+  margin:0;
+}
+.searchInput { 
+  height:20px;
+  margin:0;
+  padding-left:30px;
+  border-radius: 25px;
+}
+.searchImage {
+  position:fixed;
+  bottom:8px;
+  left:10px;
+  width:10px;
+  height:10px;
+}
+.navbarAndContent{
+  margin: 30px;
+  border-radius: 25px;
 }
