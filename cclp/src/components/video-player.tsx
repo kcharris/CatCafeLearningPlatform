@@ -32,7 +32,7 @@ function PlaylistButton(){
 // interface SidebarProps{
 //     button_liked: boolean;
 // }
-function Sidebar(){
+function VideoSidebar(){
     // this "overlay" contains the 4 buttons. Right now they are planned for the side of the videoSpace box.
     let res = <div>
         <PlaylistButton />
@@ -59,7 +59,7 @@ export default function VideoPlayer(){
     // need make a bigger box, wrap in div
     let res = <div id="video-wrapper">
         <VideoSpace />
-        <Sidebar />
+        <VideoSidebar />
     </div>
     return res
 }

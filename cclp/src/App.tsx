@@ -30,7 +30,7 @@ function App() {
     <div className="App">
 
       <div className="searchContainer" onClick={()=> handleButtonClick(SearchSection)}>
-        <img src="./cclp/public/searchImage.png" className="searchImage"/>
+        <img src="./cclp/public/searchImage.png" className="searchImage"/> 
         <input className="searchInput" type="text"/>
       </div>
 
