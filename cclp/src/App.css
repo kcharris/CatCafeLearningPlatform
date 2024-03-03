@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+
+.videoPlayer {
+  aspect-ratio: 9/16;
+  max-height: 800px;
+}
+.player-wrapper{
+  width:auto;
+  height: auto;
+}
+.react-player {
+  position:absolute;
+}
+.react-player > div{
+  position:relative;
+}
