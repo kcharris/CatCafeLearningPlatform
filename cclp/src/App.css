@@ -89,4 +89,6 @@ html, body {
 .navbarAndContent{
   margin: 30px;
   border-radius: 25px;
+  display: flex;
+  height: 100dvh;
 }

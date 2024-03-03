@@ -35,7 +35,6 @@ function App() {
       </div>
 
       <div className='navbarAndContent'>
-        <div style={{ display: "flex", height: "fit" }}>
           <Sidebar className="sideBar" defaultValue="Explore">
             <Menu>
               <MenuItem onClick={()=> handleButtonClick(aTest)}> 
@@ -56,7 +55,6 @@ function App() {
             </Menu>
           </Sidebar>
           {renderSelectedComponent()}
-        </div>
       </div>
 
     </div>
