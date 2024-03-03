@@ -2,6 +2,7 @@ html, body {
   background-image: url('./../public/background.png');
   background-size: cover;
   background-position: center;
+  min-height:100vh;
 }
 
 .App {
@@ -43,20 +44,19 @@ html, body {
   }
 }
 
-
 .videoPlayer {
   aspect-ratio: 9/16;
   max-height: 800px;
 }
 .player-wrapper{
-  width:auto;
+  width: auto;
   height: auto;
 }
 .react-player {
-  position:absolute;
+  position:relative;
 }
 .react-player > div{
-  position:relative;
+  position:absolute;
 }
 
 #video-wrapper{
@@ -91,7 +91,7 @@ html, body {
   margin: 30px;
   border-radius: 25px;
   display: flex;
-  height: 100dvh;
+  height: auto;
 }
 .videoComments{
   display: flex;
