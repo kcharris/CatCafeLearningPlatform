@@ -32,6 +32,8 @@ function VideoSpace(){
     // ratio of this area should be 9:16 for a portrait mode. A vertically held phone or video space.
     let space = <div className="videoPlayer">
             <ReactPlayer playing url='videos\pexels_videos_Street_at_night.mp4'
+                    height = "100%"
+                    width = "100%"
                     controls = {true}
                     loop = {true}
                 />
