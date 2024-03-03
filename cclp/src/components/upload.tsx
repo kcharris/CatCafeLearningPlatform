@@ -1,3 +1,3 @@
-export default function upload(){
+export default function Upload(){
     return <a></a>
 }

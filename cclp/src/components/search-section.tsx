@@ -1,3 +1,3 @@
-export default function searchSection(){
+export default function SearchSection(){
     return <a></a>
 }

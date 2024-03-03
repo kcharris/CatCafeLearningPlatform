@@ -1,10 +1,10 @@
 import ReactPlayer from 'react-player'
 
-function saveToPlaylistButton(){
+function SaveToPlaylistButton(){
     return <b/>
 }
 
-function likeButton(button_liked: boolean){
+function LikeButton(button_liked: boolean){
     let icon = null
     let no_like = <span role="img" aria-label="sheep">🐱</span>
     let like = <span role="img" aria-label="sheep">😸</span>
@@ -15,17 +15,30 @@ function likeButton(button_liked: boolean){
     return icon
 }
 
-function commentButton(){
+function CommentButton(){
     return <b/>
 }
 
-function followButton(){
+function FollowButton(){
     return <b/>
 }
 
-function overlay(){
+function Overlay(){
+    // this "overlay" contains the 4 buttons. Right now they are planned for the side of the videoSpace box.
     return <b/>
 }
-export default function videoPlayer(){
-    return <a></a>
+
+function VideoSpace(){
+    // ratio of this area should be 9:16 for a portrait mode. A vertically held phone or video space.
+    let space = <div className="videoPlayer">
+            <ReactPlayer playing url='videos\pexels_videos_Street_at_night.mp4'
+                    controls = {true}
+                    loop = {true}
+                />
+        </div>
+    return (space)
+}
+export default function VideoPlayer(){
+    
+    return (<VideoSpace />)
 }
