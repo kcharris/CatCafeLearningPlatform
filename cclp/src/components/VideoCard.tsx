@@ -32,7 +32,8 @@ const VideoCard: React.FC<VideoProps> = ({avatarSrc, likes, comments, videoSrc})
         onClick={onVideoPress}
         className='videoPlayer'
         src={videoSrc}
-        loop = {true}/>
+        loop = {true}
+        muted/>
       </div>
     </div>
   );
