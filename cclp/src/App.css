@@ -56,3 +56,7 @@
 #video-wrapper{
   display: flex;
 }
+
+.LikeButton{
+  cursor: pointer;
+}

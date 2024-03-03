@@ -1,15 +1,18 @@
 import ReactPlayer from 'react-player'
+import { useState } from 'react';
 
-interface LikeButtonProps{
-    button_liked: boolean;
-}
-function LikeButton({button_liked}: LikeButtonProps){
+// interface LikeButtonProps{
+//     button_liked: boolean;
+// }
+function LikeButton(){
     let icon = null
     let no_like = <span role="img" aria-label="sheep">🐱</span>
     let like = <span role="img" aria-label="sheep">😸</span>
-    if (button_liked){ icon = like }
-    else{ icon = no_like}
-
+    let [button_liked, setButtonLiked] = useState(false)
+    function handleClick(){
+        setButtonLiked(!button_liked)
+    }
+    icon = <div className = "LikeButton" onClick= {handleClick}>{button_liked === true ? like :no_like }</div>
     // icon should only be part of what is returned. Size of icon needs to be changed or modified in overlay.
     return icon
 }
@@ -29,11 +32,11 @@ function PlaylistButton(){
 // interface SidebarProps{
 //     button_liked: boolean;
 // }
-function Sidebar({button_liked}: LikeButtonProps){
+function Sidebar(){
     // this "overlay" contains the 4 buttons. Right now they are planned for the side of the videoSpace box.
     let res = <div>
         <PlaylistButton />
-        <LikeButton button_liked= {button_liked}/>
+        <LikeButton />
         <CommentButton />
         <FollowButton />
     </div>
@@ -54,10 +57,9 @@ function VideoSpace(){
 }
 export default function VideoPlayer(){
     // need make a bigger box, wrap in div
-    let button_liked = false;
     let res = <div id="video-wrapper">
         <VideoSpace />
-        <Sidebar button_liked= {button_liked} />
+        <Sidebar />
     </div>
     return res
 }
