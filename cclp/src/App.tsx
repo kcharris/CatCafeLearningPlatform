@@ -35,28 +35,28 @@ function App() {
       </div>
 
       <div className='navbarAndContent'>
-      <div style={{ display: "flex", height: "100vh" }}>
-      <Sidebar className="sideBar" defaultValue="Explore">
-        <Menu>
-          <MenuItem onClick={()=> handleButtonClick(aTest)}> 
-            <div>Following</div>
-          </MenuItem>
-          <MenuItem> 
-            <div>Playlist</div>
-          </MenuItem>
-          <MenuItem onClick={()=> handleButtonClick(videoPlayer)}> 
-            <div>Explore</div>
-          </MenuItem>
-          <MenuItem> 
-            <div>Profile</div>
-          </MenuItem>
-          <MenuItem className='uploadVideoClass' onClick={()=> handleButtonClick(upload)}> 
-            <div>Upload Video</div>
-          </MenuItem>
-        </Menu>
-      </Sidebar>
-      {renderSelectedComponent()}
-    </div>
+        <div style={{ display: "flex", height: "fit" }}>
+          <Sidebar className="sideBar" defaultValue="Explore">
+            <Menu>
+              <MenuItem onClick={()=> handleButtonClick(aTest)}> 
+                <div>Following</div>
+              </MenuItem>
+              <MenuItem> 
+                <div>Playlist</div>
+              </MenuItem>
+              <MenuItem onClick={()=> handleButtonClick(videoPlayer)}> 
+                <div>Explore</div>
+              </MenuItem>
+              <MenuItem> 
+                <div>Profile</div>
+              </MenuItem>
+              <MenuItem className='uploadVideoClass' onClick={()=> handleButtonClick(upload)}> 
+                <div>Upload Video</div>
+              </MenuItem>
+            </Menu>
+          </Sidebar>
+          {renderSelectedComponent()}
+        </div>
       </div>
 
     </div>
