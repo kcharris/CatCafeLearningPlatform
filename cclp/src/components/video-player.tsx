@@ -1,9 +1,5 @@
 import ReactPlayer from 'react-player'
 
-function SaveToPlaylistButton(){
-    return <b/>
-}
-
 interface LikeButtonProps{
     button_liked: boolean;
 }
@@ -19,11 +15,15 @@ function LikeButton({button_liked}: LikeButtonProps){
 }
 
 function CommentButton(){
-    return <b/>
+    return <div>comment</div>
 }
 
 function FollowButton(){
-    return <b/>
+    return <div>follow</div>
+}
+
+function PlaylistButton(){
+    return <div>playlist</div>
 }
 
 // interface SidebarProps{
@@ -32,12 +32,12 @@ function FollowButton(){
 function Sidebar({button_liked}: LikeButtonProps){
     // this "overlay" contains the 4 buttons. Right now they are planned for the side of the videoSpace box.
     let res = <div>
-        <SaveToPlaylistButton />
+        <PlaylistButton />
         <LikeButton button_liked= {button_liked}/>
         <CommentButton />
         <FollowButton />
     </div>
-    return <b/>
+    return res
 }
 
 function VideoSpace(){
