@@ -4,6 +4,7 @@ import searchSection from './search-section';
 import FollowingComponent from './FollowingComponent';
 import PlayListComponent from './PlayListComponent';
 import ProfileComponent from './ProfileComponent';
+import Atest from './A';
 
 import HomeIcon from '@mui/icons-material/Home';
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
@@ -15,7 +16,7 @@ export const SideBarData = [
     {
         title: "Home",
         icon : <HomeIcon />,
-        cmpnt: videoPlayer
+        cmpnt: Atest
     },
     {
         title: "Following",

@@ -1,9 +1,15 @@
 import React from 'react';
+import '../VideoComp.css'
+import VideoCard from './VideoCard';
 
 const Atest: React.FC = () => {
   return (
     <div>
-      <h2>Component A</h2>
+      <div className='appVideo'>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+      </div>
     </div>
   );
 };
