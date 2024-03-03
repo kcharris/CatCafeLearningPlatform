@@ -9,6 +9,7 @@ import searchSection from './components/search-section';
 import aTest from './components/A';
 import { render } from '@testing-library/react';
 import SearchSection from './components/search-section';
+import PrimarySearchAppBar from './components/navbar';
 
 function App() {
   const [selectedComponent, setSelectedComponent] = useState<React.FC>(() => videoPlayer); // Set C as the initial selected component
@@ -28,11 +29,12 @@ function App() {
   
   return (
     <div className="App">
-
-      <div className="searchContainer" onClick={()=> handleButtonClick(SearchSection)}>
+      
+      <PrimarySearchAppBar/>
+      {/* <div className="searchContainer" onClick={()=> handleButtonClick(SearchSection)}>
         <img src="./cclp/public/searchImage.png" className="searchImage"/> 
         <input className="searchInput" type="text"/>
-      </div>
+      </div> */}
 
       <div className='navbarAndContent'>
           <Sidebar className="sideBar" defaultValue="Explore">

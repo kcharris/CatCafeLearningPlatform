@@ -165,3 +165,7 @@ html, body {
 .uploadButton, .uploadFile > div{
   margin:auto;
 }
+.mainLogo{
+  height: 80px;
+  width: 80px;
+}
