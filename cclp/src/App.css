@@ -147,3 +147,21 @@ html, body {
 .MuiListItemText-primary {
   text-align: center;
 }
+.upload-wrapper{
+  display:flex;
+  margin:auto;
+  align-items: center;
+  justify-content: center;
+
+}
+.uploadFile{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:800px;
+  width:1000px;
+  background-color: rgb(204, 255, 223);
+}
+.uploadButton, .uploadFile > div{
+  margin:auto;
+}
