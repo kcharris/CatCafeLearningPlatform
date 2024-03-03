@@ -3,7 +3,7 @@ import '../VideoComp.css'
 import VideoCard from './VideoCard';
 
 
-const Atest: React.FC = () => {
+const VideoComponent: React.FC = () => {
   return (
     <div className="app-video-wrapper">
       <div className='appVideo'>
@@ -27,4 +27,4 @@ const Atest: React.FC = () => {
   );
 };
 
-export default Atest;
+export default VideoComponent;

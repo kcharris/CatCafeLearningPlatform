@@ -1,10 +1,9 @@
-import videoPlayer from './video-player';
 import upload from './upload';
 import searchSection from './search-section';
 import FollowingComponent from './FollowingComponent';
 import PlayListComponent from './PlayListComponent';
 import ProfileComponent from './ProfileComponent';
-import Atest from './A';
+import VideoComponent from './VideoComponent';
 
 import HomeIcon from '@mui/icons-material/Home';
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
@@ -16,7 +15,7 @@ export const SideBarData = [
     {
         title: "Home",
         icon : <HomeIcon />,
-        cmpnt: Atest
+        cmpnt: VideoComponent
     },
     {
         title: "Following",

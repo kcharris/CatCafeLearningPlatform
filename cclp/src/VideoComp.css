@@ -44,9 +44,10 @@
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
-    height: 100%;
+    height: 90%;
     color: white;
     padding-bottom: 50px;
+
     
 }
 

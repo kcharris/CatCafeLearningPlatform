@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../VideoComp.css'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import MessageIcon from '@mui/icons-material/Message';
@@ -13,16 +13,22 @@ interface VideoSideBarProps {
     comments: number;
 }
 const VideoCardSidebar: React.FC<VideoSideBarProps> = ({ avatarSrc, likes, comments }) => {
+    const [buttonColor, setButtonColor] = useState('white');
+
+  const handleLikeClick = () => {
+    // Change the color from black to red on click
+    setButtonColor('red');
+  };
+
     return (
         <div>
             <div className='videoCardSidebar'>
                 <div className='videoProfileNFollow'>
                     <h3><Avatar src={avatarSrc} /></h3>
                 </div>
-                <div className='videoCardActions'>
-
-                </div>
-                <FavoriteIcon fontSize='large'/>
+                <FavoriteIcon fontSize='large'
+                onClick={(handleLikeClick)}
+                style={{color: buttonColor}}/>
                 <MessageIcon  fontSize='large'/>
                 <AddCircleOutlineIcon  fontSize='large'/>
             </div>

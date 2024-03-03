@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import './App.css';
 import upload from './components/upload';
-import videoPlayer from './components/video-player';
 import searchSection from './components/search-section';
 import { render } from '@testing-library/react';
 import PrimarySearchAppBar from './components/navbar';
@@ -10,9 +9,10 @@ import FollowingComponent from './components/FollowingComponent';
 import PlayListComponent from './components/PlayListComponent';
 import ProfileComponent from './components/ProfileComponent';
 import { SideBarData } from './components/SideBarData';
+import VideoComponent from './components/VideoComponent';
 
 function App() {
-  const [selectedComponent, setSelectedComponent] = useState<React.FC>(() => videoPlayer); // Set C as the initial selected component
+  const [selectedComponent, setSelectedComponent] = useState<React.FC>(() => VideoComponent); // Set C as the initial selected component
 
   const handleButtonClick = (component: React.FC) => {
     setSelectedComponent(() => component);
