@@ -1,6 +1,6 @@
 .appVideo{
     position: relative;
-    height: 65vh;
+    height: 75vh;
     background-color: white;
     aspect-ratio: 9/16;
     display: flex;
@@ -33,4 +33,7 @@
     height: 100%;
     width: 100%;
 
+}
+.video-card-wrapper{
+    margin:auto;
 }

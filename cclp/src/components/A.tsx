@@ -4,7 +4,7 @@ import VideoCard from './VideoCard';
 
 const Atest: React.FC = () => {
   return (
-    <div>
+    <div className="app-video-wrapper">
       <div className='appVideo'>
         <VideoCard/>
         <VideoCard/>
