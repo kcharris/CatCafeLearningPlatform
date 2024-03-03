@@ -37,6 +37,9 @@ function App() {
       <div className='navbarAndContent'>
           <Sidebar className="sideBar" defaultValue="Explore">
             <Menu>
+              <MenuItem onClick={()=> handleButtonClick(videoPlayer)}> 
+                <div>Home</div>
+              </MenuItem>
               <MenuItem onClick={()=> handleButtonClick(aTest)}> 
                 <div>Following</div>
               </MenuItem>
