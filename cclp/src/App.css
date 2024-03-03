@@ -83,7 +83,7 @@ html, body {
 .navbarAndContent{
   object-fit: fill;
   height: 100%;
-  margin: 30px;
+  margin: 15px;
   border-radius: px;
   display: flex;
 }
